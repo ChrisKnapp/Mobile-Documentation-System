@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://bv4p4g8eeg64q"]
+
+[ext_resource type="Script" path="res://interactivemanula1.gd" id="1_6v8fr"]
+[ext_resource type="Texture2D" uid="uid://y34jhbm7pudi" path="res://Bilder/ERTL_0016_Destaco-Spanner WS offen.jpg" id="1_8xonp"]
+
+[node name="InteractiveManual" type="Node2D"]
+script = ExtResource("1_6v8fr")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 40.0
+offset_top = 27.0
+offset_right = 417.0
+offset_bottom = 85.0
+theme_override_font_sizes/normal_font_size = 36
+text = "Spindel wechseln"
+
+[node name="Anzeige" type="Sprite2D" parent="."]
+position = Vector2(539.9, 443)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_8xonp")
+
+[node name="Beschreibung" type="RichTextLabel" parent="."]
+offset_left = 1047.9
+offset_top = 121.0
+offset_right = 1931.9
+offset_bottom = 678.0
+theme_override_font_sizes/normal_font_size = 36
+text = "Spindel wechseln
+
+1) Schraube (1) lösen
+2) Bolzen (2) lösen
+3) Stellhebel (3) öffnen.
+! Quetschgefahr beim Öffnen des Stellhebels. Vorsichtig öffnen!
+>>Verriegelung gelöst
+4) Spindel wechseln.
+>>>Spindel gewechselt."
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1417.0
+offset_top = 896.0
+offset_right = 1551.0
+offset_bottom = 954.0
+theme_override_font_sizes/font_size = 36
+text = "Weiter."
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
